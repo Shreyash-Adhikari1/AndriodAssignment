@@ -2,6 +2,7 @@ package com.example.andriodassignment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.andriodassignment.adapter.RecyclerAdapter
@@ -44,5 +45,7 @@ class DetailsView : AppCompatActivity() {
         binding.imageRecyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = RecyclerAdapter(this, imageList, titleList, descList)
         binding.imageRecyclerView.adapter = adapter
+
+        binding.imageRecyclerView.layoutManager= GridLayoutManager(this@DetailsView,2)
     }
 }
